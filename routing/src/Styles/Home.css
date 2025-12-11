@@ -56,8 +56,56 @@
   font-size: 14px;
 }
 
-/* HOVER EFFECT */
 .recipeCard:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.banner {
+  width: 100%;
+  height: 380px;
+  background-image: url("/images/banner-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-content {
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 25px 40px;
+  border-radius: 12px;
+}
+
+.banner-content h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.banner-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.explore-btn {
+  padding: 12px 25px;
+  background-color: #ff9f43;
+  border: none;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
+
+.explore-btn:hover {
+  background-color: #ff7f00;
+  transform: scale(1.05);
 }

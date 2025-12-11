@@ -1,20 +1,27 @@
 import { useOutletContext } from "react-router-dom";
-import RecipeCard from "../Component/RecipeCard";
 import "./../Styles/Home.css";
+import RecipeCard from "../Component/RecipeCard";
 
 const Home = () => {
   const { data } = useOutletContext();
 
-  if (!data || !data.recipes) {
-    return <h2>Loading recipes...</h2>;
-  }
-
   return (
     <div className="home">
-      <h1 className="home-title">🍽 Trending Recipes</h1>
+      {/* ================= Banner Section ================= */}
+      <section className="banner">
+        <div className="banner-content">
+          <h1>Discover Your Next Favorite Recipe</h1>
+          <p>Explore delicious meals crafted for every occasion</p>
+
+          <button className="explore-btn">Explore Recipes</button>
+        </div>
+      </section>
+
+      {/* ================= Trending Section ================= */}
+      <h2 className="section-title">🍽 Trending Recipes</h2>
 
       <div className="recipe-list">
-        {data.recipes.map((item) => (
+        {data.recipes?.map((item) => (
           <RecipeCard key={item.recipe_id} item={item} />
         ))}
       </div>
