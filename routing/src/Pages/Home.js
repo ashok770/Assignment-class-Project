@@ -1,9 +1,13 @@
 import { useOutletContext } from "react-router-dom";
-import "./../Styles/Home.css";
 import RecipeCard from "../Component/RecipeCard";
+import "./../Styles/Home.css";
 
 const Home = () => {
   const { data } = useOutletContext();
+
+  if (!data || !data.recipes) {
+    return <h2>Loading recipes...</h2>;
+  }
 
   return (
     <div className="home">
@@ -11,7 +15,7 @@ const Home = () => {
 
       <div className="recipe-list">
         {data.recipes.map((item) => (
-          <RecipeCard key={item.info.id} item={item} />
+          <RecipeCard key={item.recipe_id} item={item} />
         ))}
       </div>
     </div>
