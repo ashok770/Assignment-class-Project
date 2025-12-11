@@ -8,11 +8,9 @@ const RecipeCard = ({ item }) => {
       className="recipeCard"
       onClick={() => navigate(`recipe/${item.recipe_id}`)}
     >
-      <img
-        src={`/${item.images[0]}`}
-        alt={item.title}
-        className="recipe-image"
-      />
+      <div className="recipe-img-wrapper">
+        <img src={`/${item.images[0]}`} alt={item.title} />
+      </div>
 
       <div className="card-info">
         <h3>{item.title}</h3>

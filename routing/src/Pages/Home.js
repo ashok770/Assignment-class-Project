@@ -23,7 +23,11 @@ const Home = () => {
       </section>
 
       {/* ================= Trending Section ================= */}
-      <h2 className="section-title">🍽 Trending Recipes</h2>
+      <div className="section-header">
+        <span className="section-icon">🍽</span>
+        <h2>Trending Recipes</h2>
+        <div className="section-line"></div>
+      </div>
 
       <div className="recipe-list">
         {data.recipes?.map((item) => (
