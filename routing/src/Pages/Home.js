@@ -8,7 +8,12 @@ const Home = () => {
   return (
     <div className="home">
       {/* ================= Banner Section ================= */}
-      <section className="banner">
+      <section
+        className="banner"
+        style={{
+          backgroundImage: "url('/images/banner-bg.jpg')",
+        }}
+      >
         <div className="banner-content">
           <h1>Discover Your Next Favorite Recipe</h1>
           <p>Explore delicious meals crafted for every occasion</p>
