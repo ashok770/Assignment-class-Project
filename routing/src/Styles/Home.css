@@ -1,0 +1,63 @@
+.home {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* GRID LAYOUT */
+.recipe-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 25px;
+  padding: 10px;
+}
+
+/* CARD STYLE */
+.recipeCard {
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* IMAGE STYLE */
+.recipeCard img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+/* CARD BODY */
+.card-info {
+  padding: 12px;
+}
+
+.card-info h3 {
+  font-size: 18px;
+  margin: 0;
+  color: #222;
+}
+
+.card-info p {
+  margin: 6px 0 0;
+  color: #777;
+  font-size: 14px;
+}
+
+/* HOVER EFFECT */
+.recipeCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
